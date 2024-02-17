@@ -34,7 +34,7 @@ public class MemberController {
 	@RequestMapping("/login")
 	public void goLogin() {
 	}
-		
+	///확인용///	
 	//////////////////////////////////////////////////////////////////////////
 	
 	
