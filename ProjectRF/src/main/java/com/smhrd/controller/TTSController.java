@@ -13,8 +13,8 @@ public class TTSController {
 	private MemberRepository repo;
 	
 	
-	@RequestMapping("/TTS")
-	public void goTTS() {
+	@RequestMapping("/change")
+	public void goChange() {
 		
 	}
 	
