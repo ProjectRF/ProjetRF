@@ -7,18 +7,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.smhrd.repository.MemberRepository;
 
 @Controller
-public class TTSController {
-
+public class UploadController {
+	
 	@Autowired
 	private MemberRepository repo;
 	
-	
-	@RequestMapping("/change")
-	public void goChange() {
-		
+	@RequestMapping("/record")
+	public void goRecord() {
 	}
 	
-	////////////////////////////////////////
+	@RequestMapping("/upload")
+	public void goUpload() {
+	}
+	
+	/////////////////////////////////////////////////
+	
+	
+	
+	
+	
+	
 	
 	
 }

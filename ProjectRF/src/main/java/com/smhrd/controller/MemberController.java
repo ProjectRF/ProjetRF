@@ -1,5 +1,7 @@
 package com.smhrd.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +17,7 @@ import com.smhrd.repository.MemberRepository;
 public class MemberController {
 	
 	@Autowired
-	private MemberRepository repo;
+	private MemberRepository memberrepo;
 	
 	////////////////////////////////////////////////////////////////////////////
 	
@@ -34,6 +36,16 @@ public class MemberController {
 	@RequestMapping("/login")
 	public void goLogin() {
 	}
+	
+	@RequestMapping("/changevoice")
+	public void goChange() {
+		
+	}
+	
+	@RequestMapping("mypage")
+	public void mypage() {
+		
+	}
 	///확인용///	
 	//////////////////////////////////////////////////////////////////////////
 	
@@ -42,7 +54,7 @@ public class MemberController {
 	@RequestMapping("/joinok")
 	public String join(Member member) {
 		
-		repo.save(member);
+		memberrepo.save(member);
 		
 		return "login";
 	}
@@ -52,11 +64,12 @@ public class MemberController {
 	@RequestMapping("/loginok") 
 	public String login( Member member, HttpSession session) {
 		
-		Member result = repo.findByMemIdAndMemPw(member.getMemId(), member.getMemPw());
+		Member result = memberrepo.findByMemIdAndMemPw(member.getMemId(), member.getMemPw());
+		
+		System.out.println(result.getMemEmail());
 		
 		if(result != null) {
 			session.setAttribute("user", result);
-			
 		}
 		return "main";
 	}

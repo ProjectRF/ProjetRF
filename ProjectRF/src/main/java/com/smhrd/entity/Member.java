@@ -39,6 +39,9 @@ public class Member {
 	// 성별
 	private String memGender;
 	
+	// 다운로드 횟수
+	@Column(columnDefinition = "NUMBER(10,0) DEFAULT 5")
+	private int downloadchance = 5;
 
 	// toString 오버라이딩 해야함!
 	public String toString() {
@@ -46,4 +49,9 @@ public class Member {
 		return "MEMBER";
 	
 }
-}
+	 @OneToMany(mappedBy = "member")
+	 private List<Base_Voice> voices;
+	    
+	    // 기존 코드
+	}
+	
