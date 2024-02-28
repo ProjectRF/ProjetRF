@@ -11,5 +11,5 @@ public interface MemberRepository extends JpaRepository<Member, String > {
 
 	public Member findByMemIdAndMemPw(String memId, String memPw);
 	
-	
+	public Member findByMemId(String memId); 
 }

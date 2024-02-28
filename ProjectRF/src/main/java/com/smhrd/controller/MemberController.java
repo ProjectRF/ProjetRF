@@ -3,7 +3,9 @@ package com.smhrd.controller;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
+import org.hibernate.sql.Update;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,10 +44,22 @@ public class MemberController {
 		
 	}
 	
-	@RequestMapping("mypage")
+	@RequestMapping("/mypage")
 	public void mypage() {
 		
 	}
+	
+	@RequestMapping("/editprofile")
+	public void eidtprofile() {
+		
+	}
+	
+	@RequestMapping("/divide")
+	public void divide() {
+		
+	}
+	
+	
 	///확인용///	
 	//////////////////////////////////////////////////////////////////////////
 	
@@ -76,15 +90,25 @@ public class MemberController {
 	
 	
 	
-	
-	
-	
-	
-	@RequestMapping("/test")
-	public void goTest() {
-		
+	@RequestMapping("/okedit")
+	public String okedit(Member member) {
+	    // memId를 사용하여 기존 Member 엔티티를 찾습니다.
+	    Member result = memberrepo.findByMemId(member.getMemId());
+	    
+	    if (result != null) {
+	        // 필요한 정보를 업데이트합니다.
+	        result.setMemPw(member.getMemPw());
+	        result.setMemNick(member.getMemNick());
+	        result.setMemEmail(member.getMemEmail());
+	        
+	        // 업데이트된 정보를 저장합니다.
+	        memberrepo.save(result);
+	    }
+	    
+	    return "mypage";
 	}
-	
+
+    
 	
 	
 	

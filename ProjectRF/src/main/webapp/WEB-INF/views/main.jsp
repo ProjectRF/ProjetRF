@@ -19,9 +19,9 @@
 		</c:if>
 		<c:if test="${!empty user}">
 			<a href="record">녹음</a>
+			<a href="divide">화자구분</a>
 			<a href="upload">업로드</a>
-			<a href="mypage">마이페이지</a>
-			<b>${user.memEmail}</b>
+			<a href="mypage">마이페이지</a><br>
 			<a href="#">로그아웃</a>
 		</c:if>
 	</nav>

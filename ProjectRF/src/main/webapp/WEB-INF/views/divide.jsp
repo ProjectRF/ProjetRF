@@ -7,10 +7,17 @@
     <title>Document</title>
 </head>
 <body>
+		
     	<form action ="change" method="post">
+    	<h1>화자구분 페이지입니다.</h1>
+    	<h2>${user.memId}</h2>
+    	
 	    프로젝트명<input type="text" id="project" name="project"><br>
-	    업로드할 파일<input type="file" id="file" name="sendfile" /><br>
-	    <button type ="button" id="uploadbtn">목소리 등록</button><br>
+	    업로드할 파일<input type="file" id="file" name="file" /><br>
+	    <button type ="button" id="uploadbtn">화자 구분</button><br><hr>
+	    <audio id ="first" src = ""></audio><button id = "choice1" display = "none"></button><br>
+	    <audio id ="second" src = ""></audio><button id = "choice2" display = "none"></button><br>
+	    
 		</form>
 		<a href="changevoice">이동</a>
 
@@ -24,12 +31,12 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script>
     var nickname = "${user.memId}"; // JSP에서 서버 측 변수를 가져와 JavaScript 변수에 할당
-    let pyurl = "http://192.168.219.57:5000/upload";
+    let pyurl = "http://192.168.219.57:5000/divide";
 	
     const gopython = function() {
         var formData = new FormData();
         formData.append('file', $('#file')[0].files[0]);
-        formData.append('project', $('#project').val());
+        me
         formData.append('nickname', nickname);
 
         $.ajax({
@@ -40,23 +47,22 @@
             contentType: false,
             dataType: 'json',
             success: function(response) {
-                alert("목소리 등록 성공");
-                sessionStorage.setItem('project', response.project);
-                sessionStorage.setItem('nickname', response.nickname);
-                var result = response.result; 
-
-                // 새로운 AJAX 요청으로 `result` 값을 서버의 `/change` 엔드포인트로 전송
-                $.ajax({
-                    url: 'change',
-                    type: 'POST',
-                    data: response, // JSON 형식으로 데이터 변환
-                    success: function(result) {
-                        console.log("서버로부터의 응답:", response);
-                    },
-                    error: function(xhr, status, error) {
-                        console.error("두 번째 요청 실패:", error);
-                    }
-                });
+                alert("분리 성공");
+                console.log(response.firsturl);
+                var firstAudio = document.getElementById("first");
+                firstAudio.src = response.firsturl;
+                firstAudio.setAttribute("controls", "controls");
+                
+                var secondAudio = document.getElementById("second");
+                secondAudio.src = response.secondurl;
+                secondAudio.setAttribute("controls", "controls");
+                
+                
+                // ajax로 결과값 파일 경로를 두개 다 가져와서 audio 태그에 둘다 넣고 실행시킬 수 있게 한다.
+                // 둘중 하나를 고르면 그 파일만 등록하는 라우터를 하나 만들어서 단순등록만 시킨다? 프로젝트 명을 받는다?
+                		
+                		
+                
             },
             error: function(xhr, status, error) {
                 alert("전송실패");

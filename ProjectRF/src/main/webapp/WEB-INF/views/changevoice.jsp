@@ -20,21 +20,21 @@
         crossorigin="anonymous"></script>
     <script>
     	var musicUrl = "";
-        let pyurl = "http://127.0.0.1:5000/incoding";
+        let pyurl = "http://192.168.219.57:5000/incoding";
         var project = sessionStorage.getItem('project');
         var nickname = sessionStorage.getItem('nickname');
-		console.log(project);
-		console.log(nickname);
 		
         const gopython = function() {
             var formData = new FormData();
             formData.append('sendtext', $('#sendtext').val());
             formData.append('nickname', nickname);
             formData.append('project', project);
-			
-            console.log($('#sendtext').val());
-            console.log(nickname);
-            console.log(project);
+            
+            
+            
+            
+            
+            
             
             $.ajax({
                 url : pyurl,
