@@ -32,12 +32,12 @@ public class Member {
 	@Column
 	private String memEmail;
 	
+	// 성별
+	private String memGender;
+	
 	// 생년월일
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date memBirthdate;
-	
-	// 성별
-	private String memGender;
 	
 	// 다운로드 횟수
 	@Column(columnDefinition = "NUMBER(10,0) DEFAULT 5")

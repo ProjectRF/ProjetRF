@@ -1,0 +1,53 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 100vh;
+}
+
+.u-section-1 .u-text-1 {
+  font-family: Pretendard-SemiBold;
+  font-size: 2.25rem;
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 1;
+  line-height: 1.8;
+  margin: 187px 19px 60px 570px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-text-1 {
+    animation-duration: 6000ms;
+    margin-right: 0;
+    margin-left: 389px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-text-1 {
+    margin-left: 169px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-text-1 {
+    margin-left: 0;
+  }
+}#myHeader {
+  background-color: transparent; /* 배경색을 투명하게 설정 */
+}
+#myHeader a {
+  color: #ffffff; /* 기본 색상을 흰색으로 설정 */
+}
+#myHeader:hover a {
+  color: #493725; /* 마우스가 올라갔을 때의 색상을 원래의 색상으로 설정 */
+}@font-face {
+  font-family: 'Pretendard-SemiBold';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Pretendard-SemiBold.woff);
+}@font-face {
+  font-family: 'JalnanGothicTTF';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/JalnanGothicTTF.ttf);
+}

@@ -1,0 +1,350 @@
+ .u-section-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 1032px;
+}
+
+.u-section-1 .u-text-1 {
+  font-family: Pretendard-Black;
+  font-size: 3.5rem;
+  margin: 100px auto 0;
+}
+
+.u-section-1 .u-group-1 {
+  --radius: 30px;
+  width: 678px;
+  min-height: 511px;
+  height: auto;
+  margin: 125px auto 60px;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 0 11px;
+}
+
+.u-section-1 .u-text-2 {
+  font-family: Pretendard-SemiBold;
+  font-size: 1.25rem;
+  margin: 32px 38px 0;
+}
+
+.u-section-1 .u-btn-1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  --radius: 20px;
+  font-family: Pretendard-Black;
+  font-weight: 700;
+  background-image: none;
+  margin: 65px auto 0;
+  padding: 13px 31px 14px 30px;
+}
+
+.u-section-1 .u-form-1 {
+  height: 141px;
+  width: 635px;
+  margin: 49px auto 0;
+}
+
+.u-section-1 .u-form-group-1 {
+  margin-left: 0;
+}
+
+.u-section-1 .u-input-1 {
+  font-family: Pretendard-SemiBold;
+}
+
+.u-section-1 .u-btn-2 {
+  letter-spacing: 1px;
+  --radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Pretendard-Black;
+  background-image: none;
+  padding: 13px 27px 14px 26px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-group-1 {
+    height: auto;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-group-1 {
+    width: 540px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-form-1 {
+    width: 520px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-group-1 {
+    width: 340px;
+  }
+
+  .u-section-1 .u-form-1 {
+    width: 320px;
+  }
+}.u-section-2 .u-sheet-1 {
+  min-height: 655px;
+}
+
+.u-section-2 .u-text-1 {
+  font-family: Pretendard-Black;
+  font-size: 3.5rem;
+  margin: 57px auto 0;
+}
+
+.u-section-2 .u-text-2 {
+  font-family: Pretendard-Black;
+  width: 423px;
+  margin: 41px auto 0;
+}
+
+.u-section-2 .u-group-1 {
+  --radius: 30px;
+  min-height: 293px;
+  margin-top: 57px;
+  margin-bottom: 57px;
+  height: auto;
+}
+
+.u-section-2 .u-container-layout-1 {
+  padding: 18px 30px 0;
+}
+
+.u-section-2 .u-form-1 {
+  height: 141px;
+  width: 1080px;
+  margin: 58px 0 0;
+}
+
+.u-section-2 .u-form-group-1 {
+  margin-left: 0;
+}
+
+.u-section-2 .u-btn-1 {
+  letter-spacing: 1px;
+  --radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Pretendard-Black;
+  background-image: none;
+  padding: 10px 27px 10px 26px;
+}
+
+.u-section-2 .u-icon-1 {
+  font-size: 1.25em;
+  margin-right: 0;
+  vertical-align: 0px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-2 .u-group-1 {
+    --animation-custom_in-translate_x: -200px;
+    --animation-custom_in-translate_y: 0px;
+    --animation-custom_in-opacity: 0;
+    --animation-custom_in-rotate: 0deg;
+    --animation-custom_in-scale: 1;
+    height: auto;
+  }
+
+  .u-section-2 .u-form-1 {
+    width: 880px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-2 .u-form-1 {
+    width: 660px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-2 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-2 .u-form-1 {
+    width: 520px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-2 .u-text-2 {
+    width: 340px;
+  }
+
+  .u-section-2 .u-form-1 {
+    width: 320px;
+  }
+}.u-section-3 .u-sheet-1 {
+  min-height: 659px;
+}
+
+.u-section-3 .u-text-1 {
+  font-family: Pretendard-Black;
+  font-size: 3.5rem;
+  margin: 66px auto 0;
+}
+
+.u-section-3 .u-group-1 {
+  --radius: 30px;
+  min-height: 329px;
+  height: auto;
+  margin-top: 66px;
+  margin-bottom: 60px;
+}
+
+.u-section-3 .u-container-layout-1 {
+  padding: 30px;
+}
+
+.u-section-3 .u-audio-1 {
+  width: 741px;
+  height: 95px;
+  background-image: none;
+  margin: 20px auto 0;
+}
+
+.u-section-3 .u-btn-1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  --radius: 20px;
+  font-family: Pretendard-Black;
+  font-weight: 700;
+  background-image: none;
+  margin: 30px 433px 0 auto;
+  padding: 10px 31px;
+}
+
+.u-section-3 .u-icon-1 {
+  font-size: 1.25em;
+}
+
+.u-section-3 .u-btn-2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  --radius: 20px;
+  font-family: Pretendard-Black;
+  font-weight: 700;
+  background-image: none;
+  margin: -52px 181px 0 auto;
+  padding: 13px 44px 14px 42px;
+}
+
+.u-section-3 .u-btn-3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  --radius: 20px;
+  font-family: Pretendard-Black;
+  font-weight: 700;
+  background-image: none;
+  margin: -52px auto 0 215px;
+  padding: 10px 48px;
+}
+
+.u-section-3 .u-icon-2 {
+  font-size: 1.25em;
+}
+
+@media (max-width: 1199px) {
+  .u-section-3 .u-group-1 {
+    --animation-custom_in-translate_x: 0px;
+    --animation-custom_in-translate_y: -300px;
+    --animation-custom_in-opacity: 0;
+    --animation-custom_in-rotate: 0deg;
+    --animation-custom_in-scale: 1;
+    height: auto;
+  }
+
+  .u-section-3 .u-audio-1 {
+    --animation-custom_in-translate_x: 0px;
+    --animation-custom_in-translate_y: -300px;
+    --animation-custom_in-opacity: 0;
+    --animation-custom_in-rotate: 0deg;
+    --animation-custom_in-scale: 1;
+  }
+
+  .u-section-3 .u-btn-1 {
+    margin-right: 233px;
+  }
+
+  .u-section-3 .u-btn-2 {
+    margin-right: 0;
+  }
+
+  .u-section-3 .u-btn-3 {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-3 .u-audio-1 {
+    width: 660px;
+  }
+
+  .u-section-3 .u-btn-1 {
+    margin-right: 13px;
+  }
+
+  .u-section-3 .u-btn-3 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-3 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-3 .u-audio-1 {
+    width: 520px;
+  }
+
+  .u-section-3 .u-btn-1 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-3 .u-audio-1 {
+    width: 320px;
+  }
+}@font-face {
+  font-family: 'Pretendard-Black';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Pretendard-Black.otf);
+}@font-face {
+  font-family: 'Pretendard-SemiBold';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Pretendard-SemiBold.woff);
+}@font-face {
+  font-family: 'JalnanGothicTTF';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/JalnanGothicTTF.ttf);
+}

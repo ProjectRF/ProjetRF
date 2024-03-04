@@ -20,24 +20,18 @@
         crossorigin="anonymous"></script>
     <script>
     	var musicUrl = "";
-        let pyurl = "http://192.168.219.57:5000/incoding";
+        let pyurl2 = "http://192.168.219.57:5000/incoding";
         var project = sessionStorage.getItem('project');
         var nickname = sessionStorage.getItem('nickname');
 		
-        const gopython = function() {
+        const gopython2 = function() {
             var formData = new FormData();
             formData.append('sendtext', $('#sendtext').val());
             formData.append('nickname', nickname);
             formData.append('project', project);
             
-            
-            
-            
-            
-            
-            
             $.ajax({
-                url : pyurl,
+                url : pyurl2,
                 type : 'POST',
                 data : formData,
                 processData: false,
@@ -75,7 +69,7 @@
                 }
             });
         };
-        $("#playbtn").on("click", gopython);
+        $("#playbtn").on("click", gopython2);
         $("#deepdb").on("click", savedeepdb);
     </script>
 </body>

@@ -82,6 +82,24 @@ public class TTSRESTController {
         return "change";
     }
     
+//    @RequestMapping("/dividechange")
+//    public String dividechange(
+//    		@RequestParam("course")String course, 
+//    		@RequestParam("nickname")String nickname, 
+//    		@RequestParam("project")String project) {
+//    	Member member = memberRepo.findById(nickname).orElseThrow(() -> new RuntimeException("Member not found"));
+//    	Base_Voice voice = new Base_Voice();
+//    	
+//    	voice.setCourse(project);
+//    	voice.setMember(member);
+//    	
+//    	uploadRepo.save(voice);
+//    	
+//    	return "divide";
+//    }
+    
+    
+    
     @RequestMapping("/ending")
     public String ending(@RequestParam("nickname") String nickname, @RequestParam("sendtext") String sendtext, @RequestParam("musicUrl") String musicUrl) {
     	
@@ -113,7 +131,16 @@ public class TTSRESTController {
         return dtoList;
     }
     
-    
+    // 다운로드 횟수 감소 메소드
+    @RequestMapping("/downfile")
+    public String downfile(Member member) {
+    	
+    	// ajax요청에 값을 담아서 requestparam으로 받아서 아이디만 받아서 비교해서 ending 메소드랑 비슷하게
+    	
+    	
+    	
+    	return "mypage";
+    }
     
 
     

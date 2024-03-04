@@ -59,6 +59,25 @@ public class MemberController {
 		
 	}
 	
+	@RequestMapping("/Service")
+	public void Service() {
+		
+	}
+	
+	@RequestMapping("/checkPW")
+	public void checkPW() {
+		
+	}
+	
+	@RequestMapping("/FAQ")
+	public void goFAQ() {
+		
+	}
+	
+	@RequestMapping("/divide2")
+	public void divide2() {
+		
+	}
 	
 	///확인용///	
 	//////////////////////////////////////////////////////////////////////////
@@ -68,9 +87,16 @@ public class MemberController {
 	@RequestMapping("/joinok")
 	public String join(Member member) {
 		
+		System.out.println(member.getMemId());
+		System.out.println(member.getMemPw());
+		System.out.println(member.getMemNick());
+		System.out.println(member.getMemEmail());
+		System.out.println(member.getMemGender());
+		System.out.println(member.getMemBirthdate());
+		
 		memberrepo.save(member);
 		
-		return "login";
+		return "redirect:/login";
 	}
 	
 	
@@ -79,14 +105,24 @@ public class MemberController {
 	public String login( Member member, HttpSession session) {
 		
 		Member result = memberrepo.findByMemIdAndMemPw(member.getMemId(), member.getMemPw());
-		
-		System.out.println(result.getMemEmail());
-		
 		if(result != null) {
 			session.setAttribute("user", result);
+			return "main";
+		}else {
+			return "login";
 		}
-		return "main";
+		
 	}
+	
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+		
+		 session.invalidate();
+		
+		return "redirect:/main";
+	}
+	
+	
 	
 	
 	
@@ -108,7 +144,17 @@ public class MemberController {
 	    return "mypage";
 	}
 
-    
+	@RequestMapping("/checkok") 
+	public String checkok( Member member, HttpSession session) {
+		
+		Member result = memberrepo.findByMemIdAndMemPw(member.getMemId(), member.getMemPw());
+		if(result != null) {
+			return "editprofile";
+		}else {
+			return "redirect:/checkPW";
+		}
+		
+	}
 	
 	
 	

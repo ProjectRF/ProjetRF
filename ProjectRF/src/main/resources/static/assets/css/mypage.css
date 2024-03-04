@@ -1,0 +1,233 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 332px;
+}
+
+.u-section-1 .u-layout-wrap-1 {
+  margin-top: 56px;
+  margin-bottom: 60px;
+}
+
+.u-section-1 .u-layout-cell-1 {
+  min-height: 157px;
+  background-image: none;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 30px;
+}
+
+.u-section-1 .u-text-1 {
+  font-family: Pretendard-SemiBold;
+  font-size: 2.5rem;
+  margin: 0 auto 0 154px;
+}
+
+.u-section-1 .u-text-2 {
+  font-family: Pretendard-SemiBold;
+  margin: -35px auto 7px 269px;
+}
+
+.u-section-1 .u-layout-cell-2 {
+  min-height: 157px;
+  background-image: none;
+}
+
+.u-section-1 .u-container-layout-2 {
+  border-style: solid;
+  padding: 26px 30px;
+}
+
+.u-section-1 .u-text-3 {
+  font-family: Pretendard-SemiBold;
+  font-size: 1.25rem;
+  width: 157px;
+  margin: 9px auto 0;
+}
+
+.u-section-1 .u-text-4 {
+  font-family: Pretendard-SemiBold;
+  font-size: 2.5rem;
+  width: 50px;
+  margin: -40px auto 0;
+}
+
+.u-section-1 .u-text-5 {
+  font-family: Pretendard-SemiBold;
+  font-size: 1.125rem;
+  margin: -46px 216px 18px 243px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 740px;
+  }
+
+  .u-section-1 .u-layout-wrap-1 {
+    margin-top: 350px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 129px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-left: 116px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 208px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 129px;
+  }
+
+  .u-section-1 .u-text-5 {
+    margin-right: 167px;
+    margin-left: 194px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 433px;
+  }
+
+  .u-section-1 .u-layout-wrap-1 {
+    margin-top: 120px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-left: 73px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 140px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+
+  .u-section-1 .u-text-5 {
+    margin-right: 112px;
+    margin-left: 139px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 470px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-left: 183px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 250px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-right: 195px;
+    margin-left: 168px;
+  }
+
+  .u-section-1 .u-text-4 {
+    margin-left: 234px;
+  }
+
+  .u-section-1 .u-text-5 {
+    width: 269px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 400px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-left: auto;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 114px;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-right: 95px;
+    margin-left: 68px;
+  }
+
+  .u-section-1 .u-text-4 {
+    margin-left: 134px;
+  }
+
+  .u-section-1 .u-text-5 {
+    margin-left: 25px;
+    margin-right: 25px;
+    width: auto;
+  }
+} .u-section-2 {
+  background-position: 50% 50%;
+  background-image: none;
+}
+
+.u-section-2 .u-sheet-1 {
+  min-height: 571px;
+}
+
+.u-section-2 .u-text-1 {
+  font-size: 3.5rem;
+  font-family: Pretendard-Black;
+  margin: 57px 138px 60px 0;
+}
+
+@media (max-width: 1199px) {
+   .u-section-2 {
+    min-height: 700px;
+  }
+
+  .u-section-2 .u-text-1 {
+    font-weight: normal;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-2 .u-text-1 {
+    font-size: 1rem;
+  }
+}@font-face {
+  font-family: 'Pretendard-SemiBold';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Pretendard-SemiBold.woff);
+}@font-face {
+  font-family: 'Pretendard-Black';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Pretendard-Black.otf);
+}@font-face {
+  font-family: 'JalnanGothicTTF';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/JalnanGothicTTF.ttf);
+}

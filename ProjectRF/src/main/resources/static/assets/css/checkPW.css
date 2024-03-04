@@ -1,0 +1,99 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 1115px;
+}
+
+.u-section-1 .u-text-1 {
+  font-size: 3.5rem;
+  font-family: Pretendard-Black;
+  margin: 100px auto 0;
+}
+
+.u-section-1 .u-form-1 {
+  height: 546px;
+  width: 570px;
+  margin: 80px auto 60px;
+}
+
+.u-section-1 .u-label-1 {
+  font-family: Pretendard-SemiBold;
+  font-size: 1.125rem;
+}
+
+.u-section-1 .u-input-1 {
+  font-family: Pretendard-SemiBold;
+}
+
+.u-section-1 .u-form-group-2 {
+  margin-left: 0;
+}
+
+.u-section-1 .u-label-2 {
+  font-family: Pretendard-SemiBold;
+  font-size: 1.125rem;
+}
+
+.u-section-1 .u-input-2 {
+  font-family: Pretendard-SemiBold;
+}
+
+.u-section-1 .u-form-group-3 {
+  margin-left: 0;
+}
+
+.u-section-1 .u-label-3 {
+  font-family: Pretendard-SemiBold;
+  font-size: 1.125rem;
+}
+
+.u-section-1 .u-input-3 {
+  font-family: Pretendard-SemiBold;
+}
+
+.u-section-1 .u-btn-1 {
+  font-family: Pretendard-SemiBold;
+  background-image: none;
+  width: 100%;
+  font-size: 1rem;
+  padding: 13px 0 14px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-label-1 {
+    text-decoration: none solid rgb(90, 77, 69);
+  }
+
+  .u-section-1 .u-label-2 {
+    text-decoration: none solid rgb(90, 77, 69);
+  }
+
+  .u-section-1 .u-label-3 {
+    text-decoration: none solid rgb(90, 77, 69);
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-form-1 {
+    width: 540px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-form-1 {
+    width: 340px;
+  }
+}@font-face {
+  font-family: 'Pretendard-Black';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Pretendard-Black.otf);
+}@font-face {
+  font-family: 'Pretendard-SemiBold';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Pretendard-SemiBold.woff);
+}@font-face {
+  font-family: 'JalnanGothicTTF';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/JalnanGothicTTF.ttf);
+}
