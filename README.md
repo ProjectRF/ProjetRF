@@ -1,4 +1,4 @@
-# :pushpin: RE.FIT(팀명 : Hi-Five)
+# :pushpin: ![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/5d90c347-4e13-4f88-90b0-1185521824e3)(팀명 : Hi-Five)
 ![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/6974b95b-a3a1-4b3d-97bd-13154404ad5c)
 
 ><b>XTTS2와 ClovaSpeech를 활용한 화자인식 및 음성복제 서비스</b>
