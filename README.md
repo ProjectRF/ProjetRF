@@ -36,7 +36,8 @@
 </br>
 
 ## 3. ERD 설계
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/final_erd.png)
+![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/a78cd120-47e5-461f-9b59-d50ef3477b47)
+
 
 
 
