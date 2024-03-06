@@ -10,9 +10,11 @@
 
 ## 1. 제작 기간 & 역할분담
 - 2024년 1월 16일 ~ 3월 7일
-- 김연재(팀장) : PM, Front-End 및 DB
-- 최준성(팀원) : Back-End 및 DB
-- 정명훈(팀원) : Back-End 및 DB
+- 손병권(팀장) : PM, Front-End
+- 김연재(부팀장) : Back-End 및 DB 
+- 강치원(팀원) : Back-End 및 문서작업
+- 김미송(팀원) : Front-End
+- 오푸른(팀원) : Front-End
 
 </br>
 
@@ -20,12 +22,14 @@
 #### `Back-end`
   - Java 8
   - Oracle DB
-  - JSP
-  - My-Batis
-  - Web-Socket
-  - Node.js
+  - JPA
+  - Spring Boot
+  - Python
+  - Python Flask
+  - Amazon S3
 #### `Front-end`
   - Nicepage
+  - HTML
   - CSS
   - JS
 
