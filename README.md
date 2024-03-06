@@ -2,10 +2,9 @@
 ![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/63be5a73-f64f-4403-9a82-8023316cc2b4)
 
 ><strong>XTTS2와 ClovaSpeech를 활용한 화자인식 및 음성복제 서비스</strong>
-* SNS을 기반 모임권장 프로그램
-* 실시간 채팅을 통한 편한 일정관리
-* 랜덤 매칭을 통한 개인/그룹 경기기능
-* 카카오맵API를 활용한 경기장 및 편의시설 추천
+* 최신 XTTS 모델을 사용해 짧은 시간만으로 TTS학습 가능
+* 사용자가 사용하기 편한 UI/UX
+* 마이페이지에서 다운로드 가능
 
 </br>
 
@@ -38,7 +37,7 @@
 
 ## 3. ERD 설계
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/final_erd.png)
-![](https://github.com/JungHyung2/gitio.io/blob/master/assets/images/portfolio/p1.jpg)
+
 
 
 ## 4. 핵심 기능
