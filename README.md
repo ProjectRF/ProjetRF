@@ -1,6 +1,5 @@
 # :pushpin: RE.FIT(팀명 : Hi-Five)
-![Uploading image.png…]()
-
+![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/6974b95b-a3a1-4b3d-97bd-13154404ad5c)
 
 ><b>XTTS2와 ClovaSpeech를 활용한 화자인식 및 음성복제 서비스</b>
 * 최신 XTTS 모델을 사용해 짧은 시간만으로 TTS학습 가능
