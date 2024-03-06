@@ -1,6 +1,6 @@
-# :pushpin: Gather up!!(팀명 : SNS하고싶조)
-![게더업-removebg-preview](https://github.com/2021-SMHRD-KDT-AI-15/SNSRepo/assets/144158751/92431374-5c7e-400a-ad1a-c6490b97dfe3)
-><strong>SNS 기반 매칭 및 그룹 지원 서비스</strong>
+# :pushpin: RE.FIT(팀명 : Hi-Five)
+
+><strong>XTTS2와 ClovaSpeech를 활용한 화자인식 및 음성복제 서비스</strong>
 * SNS을 기반 모임권장 프로그램
 * 실시간 채팅을 통한 편한 일정관리
 * 랜덤 매칭을 통한 개인/그룹 경기기능
@@ -9,7 +9,7 @@
 </br>
 
 ## 1. 제작 기간 & 역할분담
-- 2023년 11월 1일 ~ 12월 13일
+- 2024년 1월 16일 ~ 3월 7일
 - 김연재(팀장) : PM, Front-End 및 DB
 - 최준성(팀원) : Back-End 및 DB
 - 정명훈(팀원) : Back-End 및 DB
