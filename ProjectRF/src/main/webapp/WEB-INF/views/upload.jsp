@@ -239,7 +239,7 @@
             
             
             <form action="upload" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;" method="post">
-            <input type="file" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-1">
+            <input type="file" id="file" name="sendfile" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-1">
             <div class="u-align-center u-form u-form-1">
                 <div class="u-form-group u-form-textarea u-label-none u-form-group-1">
                   <label for="textarea-da5b" class="u-label">Textarea</label>
@@ -257,7 +257,7 @@
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-section-2" id="sec-9cf4">
+    <section class="u-clearfix u-section-2" id="sec-9cf4" style="display:none;">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h4 class="u-align-center u-custom-font u-text u-text-custom-color-14 u-text-default u-text-1"> 음성 변환 </h4>
         <p class="u-align-center u-custom-font u-text u-text-custom-color-14 u-text-2">텍스트를 입력하시고 변환하기를 눌러주세요<br>녹음된 목소리가 입력하신 텍스트의 음성으로 변환됩니다
@@ -281,7 +281,7 @@
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-section-3" id="sec-879b">
+    <section class="u-clearfix u-section-3" id="sec-879b" style="display:none;">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h4 class="u-custom-font u-text u-text-custom-color-14 u-text-default u-text-1">음성 확인</h4>
         <div class="u-container-style u-custom-color-11 u-expanded-width u-group u-radius u-shape-round u-group-1">
@@ -323,18 +323,18 @@
                   </div>
                 </div>
               </div>
-              <audio src="#" crossorigin="anonymous" preload="metadata"></audio>
             </div>
+            <audio id="audioPlayer2" style="display: none;"></audio>
             <button id="deepdb" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-1"><span class="u-file-icon u-icon u-text-custom-color-16 u-icon-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/724933-270cefb6.png" alt=""></span>&nbsp;보관함에 저장
             </button>
             
-            <audio id="audioPlayer" controls hidden></audio>
             
             
             
-            <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""> 다시 변환하기</a>
-            <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><span class="u-file-icon u-icon u-text-custom-color-18 u-icon-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/27223-3460c3a5.png" alt=""></span>&nbsp;재생하기
-            </a>
+            
+            <a href="upload" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""> 다시 변환하기</a>
+            <button id="lastplayButton" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><span class="u-file-icon u-icon u-text-custom-color-18 u-icon-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/27223-3460c3a5.png" alt=""></span>&nbsp;재생하기
+            </button>
           </div>
         </div>
       </div>
@@ -368,6 +368,15 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         
         <script>
+        
+        
+        const play2Controls = document.getElementById('sec-9cf4');
+        const play3Controls = document.getElementById('sec-879b');
+        const audioPlayer2 = document.getElementById('audioPlayer2');
+        
+        
+        
+        
         var nickname = "${user.memId}"; // JSP에서 서버 측 변수를 가져와 JavaScript 변수에 할당
         var project = $('#project').val();
         let pyurl = "http://192.168.219.57:5000/upload";
@@ -387,6 +396,7 @@
                 dataType: 'json',
                 success: function(response) {
                     alert("목소리 등록 성공");
+                    play2Controls.style.display = 'block';
                     sessionStorage.setItem('project', response.project);
                     sessionStorage.setItem('nickname', response.nickname);
                     $("#change").show();
@@ -415,12 +425,30 @@
         ///////////////////////////////////////////////////////////////////////////////////////
       		var musicUrl = "";
             let pyurl2 = "http://192.168.219.57:5000/incoding";
+            
+            let isPlaying = false;
+
+            const toggleAudioPlayback = function(audioPlayer) {
+                if (isPlaying) {
+                    audioPlayer.pause();
+                } else {
+                    audioPlayer.play();
+                }
+                isPlaying = !isPlaying;
+            };
     		
             const gopython2 = function() {
                 var formData = new FormData();
                 formData.append('sendtext', $('#sendtext').val());
                 formData.append('nickname', nickname);
                 formData.append('project', $('#project').val());
+                
+                const audioPlayer2 = $('#audioPlayer2');
+                const lastplayButton = document.getElementById('lastplayButton');
+                
+                lastplayButton.addEventListener('click', function() {
+                    toggleAudioPlayback(audioPlayer2[0]);
+                });
                 
                 $.ajax({
                     url : pyurl2,
@@ -432,10 +460,11 @@
                         // 서버로부터 받은 응답에서 오디오 파일 URL을 올바르게 추출
                         musicUrl = response.file_url; // Flask에서 'file_url' 키로 URL을 반환한다고 가정
                         // audio 태그의 src 속성을 설정하고 음악을 재생
-                        var audioPlayer = $('#audioPlayer');
-                        audioPlayer.attr('src', musicUrl);
-                        audioPlayer[0].play();
-                        audioPlayer.show();
+                        alert("TTS변환완료");
+                        play3Controls.style.display = 'block';
+                        audioPlayer2.attr('src', musicUrl);
+                        
+                        audioPlayer2.show();
                     },
                     error : function(xhr, status, error) {
                         alert("전송 실패: " + error);

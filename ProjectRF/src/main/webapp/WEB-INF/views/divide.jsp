@@ -234,7 +234,7 @@
 
 
     <section class="u-align-center u-clearfix u-section-1" id="sec-16a7">
-      <form action="chagne" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px;" method="post">
+      <form action="change" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px;" method="post">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h4 class="u-align-center u-custom-font u-text u-text-custom-color-14 u-text-default u-text-1">통화 파일 업로드</h4>
         <div class="u-container-style u-custom-color-18 u-group u-radius u-shape-round u-group-1">
@@ -258,7 +258,7 @@
         </div>
       </div>
     </section>
-    <section class="u-align-center u-clearfix u-section-2" id="section2">
+    <section class="u-align-center u-clearfix u-section-2" id="section2" style="display:none;">
       
       
       
@@ -277,18 +277,18 @@
         </div>
         <div class="u-rotation-parent u-rotation-parent-1"><span class="u-file-icon u-flip-horizontal u-icon u-icon-1"><img src="images/483947.png" alt=""></span>
         </div>
-        <p class="u-align-center u-custom-font u-text u-text-default u-text-3">B</p><audio id="second" src=""></audio>
+        <p class="u-align-center u-custom-font u-text u-text-default u-text-3">B</p><audio id="second" src="" style="display: none;"></audio>
         	
-        <p class="u-align-center u-custom-font u-text u-text-default u-text-4">A</p><audio id="first" src=""></audio>
+        <p class="u-align-center u-custom-font u-text u-text-default u-text-4">A</p><audio id="first" src="" style="display: none;"></audio>
         	
         <div class="u-rotation-parent u-rotation-parent-2"><span class="u-file-icon u-flip-horizontal u-icon u-text-custom-color-19 u-icon-2"><img src="images/483947-7bebaf9f.png" alt=""></span>
         </div>
         <div class="u-rotation-parent u-rotation-parent-3"><span class="u-file-icon u-icon u-text-custom-color-20 u-icon-3"><img src="images/483947-25a61f16.png" alt=""></span>
         </div>
-        <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><span class="u-file-icon u-icon u-text-custom-color-18 u-icon-4" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/27223-3460c3a5.png" alt=""></span>&nbsp;재생하기
-        </a>
-        <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><span class="u-file-icon u-icon u-text-custom-color-18 u-icon-5" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/27223-3460c3a5.png" alt=""></span>&nbsp;재생하기
-        </a>
+        <button id="firstButton" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><span class="u-file-icon u-icon u-text-custom-color-18 u-icon-4" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/27223-3460c3a5.png" alt=""></span>&nbsp;재생하기
+        </button>
+        <button id="secondButton" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><span class="u-file-icon u-icon u-text-custom-color-18 u-icon-5" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/27223-3460c3a5.png" alt=""></span>&nbsp;재생하기
+        </button>
 <!-- B --> <button id="choice2" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-3"></span>&nbsp;선택하기
         </button>
 <!-- A --> <button id="choice1" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-4"></span>&nbsp;선택하기
@@ -321,6 +321,32 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
+    
+    const play2Controls = document.getElementById('section2');
+    
+    const audioplayer = document.getElementById('first');
+    const audioplayer2 = document.getElementById('second');
+    
+    let isPlaying = false;
+
+    const toggleAudioPlayback = function(audioPlayer) {
+        if (isPlaying) {
+            audioPlayer.pause();
+        } else {
+            audioPlayer.play();
+        }
+        isPlaying = !isPlaying;
+    };
+    
+    const toggleAudioPlayback2 = function(audioPlayer2) {
+        if (isPlaying) {
+            audioPlayer2.pause();
+        } else {
+            audioPlayer2.play();
+        }
+        isPlaying = !isPlaying;
+    };
+    
     var nickname = "${user.memId}";
     var pyurl = "http://192.168.219.57:5000/divide";
     
@@ -328,6 +354,21 @@
         var formData = new FormData();
         formData.append('file', $('#file')[0].files[0]);
         formData.append('nickname', nickname);
+
+        // 변경된 부분: jQuery 객체에서 HTMLAudioElement로 변환
+        const audioPlayer = $('#first')[0];
+        const audioPlayer2 = $('#second')[0];
+
+        const firstButton = document.getElementById('firstButton');
+        const secondButton = document.getElementById('secondButton');
+
+        firstButton.addEventListener('click', function() {
+            toggleAudioPlayback(audioPlayer);
+        });
+
+        secondButton.addEventListener('click', function() {
+            toggleAudioPlayback2(audioPlayer2);
+        });
 
         $.ajax({
             url: pyurl,
@@ -338,15 +379,17 @@
             dataType: 'json',
             success: function(response) {
                 alert("구분 성공");
-                var firstAudio = document.getElementById("first");
-                firstAudio.src = response.firsturl;
-                firstAudio.setAttribute("controls", "controls");
+                play2Controls.style.display = 'block';
 
-                var secondAudio = document.getElementById("second");
-                secondAudio.src = response.secondurl;
-                secondAudio.setAttribute("controls", "controls");
+                // 변경된 부분: jQuery 객체에서 HTMLAudioElement로 변환
+                audioPlayer.src = response.firsturl;
+                audioPlayer.setAttribute("controls", "controls");
+
+                // 변경된 부분: jQuery 객체에서 HTMLAudioElement로 변환
+                audioPlayer2.src = response.secondurl;
+                audioPlayer2.setAttribute("controls", "controls");
                 
-                // 버튼에 URL 할당
+             	// 버튼에 URL 할당
                 document.getElementById("choice1").onclick = function() { window.location.href = response.firsturl; };
                 document.getElementById("choice2").onclick = function() { window.location.href = response.secondurl; };
                 
@@ -356,6 +399,7 @@
             }
         });
     };
+
 
     
     $("#uploadbtn").on("click", gopython);
