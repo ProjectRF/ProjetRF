@@ -83,10 +83,9 @@
   - 사용자가 결과로 출력된 음성을 듣고 마음에 든다면 저장하기 버튼을 눌러 CONTROLLER를 통해 ORACLE DB에 IDX, 사용자의 ID, 생성날짜, URL를 저장합니다.
   - DB에 저장된 값들은 차후 마이페이지에서 자신의 보관함을 사용할 때 이용됩니다.
 
-- **결과 응답** :pushpin: [코드 확인]()
-  - Service 계층에서 넘어온 로직 처리 결과(메세지)를 화면단에 응답해줍니다.
 
-### 4.4. Service
+
+### 4.3.2 핵심 기능 : 음성 파일 업로드
 
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_service1.png)
 
