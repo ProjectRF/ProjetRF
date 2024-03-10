@@ -50,10 +50,12 @@
 <div markdown="1">
 
 ### 4.1. 전체 흐름
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow1.png)
+![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/ea00df9e-a30b-454f-b2f2-aa43a4e4309d)
+
 
 ### 4.2. 사용자 요청
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
+![Untitled Drawing](https://github.com/ProjectRF/ProjetRF/assets/144158751/3f32c622-039a-4f69-9de7-a6be2904c928)
+
 
 - **URL 정규식 체크** :pushpin: [코드 확인](https://github.com/JungHyung2/gitio.io/blob/95b4c4f06a2a5a74a00f81a3c3fcc003c994725f/index.html#L15C8-L15C26)
   - Vue.js로 렌더링된 화면단에서, 사용자가 등록을 시도한 URL의 모양새를 정규식으로 확인합니다.
