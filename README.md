@@ -50,10 +50,12 @@
 <div markdown="1">
 
 ### 4.1. 전체 흐름
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow1.png)
+![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/bcbcc788-75f7-40b6-ac03-1a7190ec367c)
+
 
 ### 4.2. 사용자 요청
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
+![Untitled Drawing](https://github.com/ProjectRF/ProjetRF/assets/144158751/5cb6320d-cafb-4a35-8bfd-f697afd7bc93)
+
 
 - **흐름예시**
   - 사용자는 로그인을 한 후 녹음, 업로드, 통화파일 업로드 3가지 메인기능 이용 가능 그 외 서비스소개, FAQ, 마이페이지 이용 가능
