@@ -70,9 +70,10 @@
 
 ### 4.3.1 핵심 기능 : 음성녹음
 
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_controller.png)
+![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/0b5146b7-1ab2-488d-a2e8-e556c547f2b6)
 
-- :pushpin: [코드 확인](https://github.com/JungHyung2/gitio.io/blob/d35d29b64c0e8b9653862bdcc1e6b997d2436ec9/index.html#L57C1-L57C202)
+
+
   - 음성 녹음에서는 먼저 파일 이름을 지은 후  10개의 문장을 통해 녹음을 진행하게됩니다.
   - JS로 구현한 녹음파일들을 하나로 합쳐 AJAX 비동기 요청을 PYTHON FLASK에 보냅니다.
   - PYTHON FLASK에서 UPLOAD루트로 연결된 후 AMAZON S3와 연결하여 파일이름, 사용자ID, 녹음된 목소리를 폴더에 저장합니다.
