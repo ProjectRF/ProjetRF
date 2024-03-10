@@ -50,16 +50,19 @@
 <div markdown="1">
 
 ### 4.1. 전체 흐름
-![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/ea00df9e-a30b-454f-b2f2-aa43a4e4309d)
-
+![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow1.png)
 
 ### 4.2. 사용자 요청
-![Untitled Drawing](https://github.com/ProjectRF/ProjetRF/assets/144158751/3f32c622-039a-4f69-9de7-a6be2904c928)
+![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
 
-
-- **URL 정규식 체크** :pushpin: [코드 확인](https://github.com/JungHyung2/gitio.io/blob/95b4c4f06a2a5a74a00f81a3c3fcc003c994725f/index.html#L15C8-L15C26)
-  - Vue.js로 렌더링된 화면단에서, 사용자가 등록을 시도한 URL의 모양새를 정규식으로 확인합니다.
-  - URL의 모양새가 아닌 경우, 에러 메세지를 띄웁니다.
+- **흐름예시**
+  - 사용자는 로그인을 한 후 녹음, 업로드, 통화파일 업로드 3가지 메인기능 이용 가능 그 외 서비스소개, FAQ, 마이페이지 이용 가능
+  - 서비스소개 : 간단한 사이트에 대한 소개 및 정보
+  - 음성 녹음 : 파일이름을 작성한 후 10문장을 녹음하고 원하는 텍스트를 작성하여 이용 가능
+  - 파일 업로드 : 불가피한 경우로 녹음이 불가능 할 경우 개인 녹음파일로 진행 가능 진행 순서는 음성 녹음과 동일
+  - 통화 구분 : 불가피한 경우로 인해 녹음 또는 개인 음성파일이 없을 경우 기본적으로 1대 1 통화파일을 업로드 시켜 화자를 구분해줌. 차후 선택창에서 A 또는 B의 목소리를 정해 다운로드 받을 수 있음
+  - FAQ : 간단한 질문들에 대한 답변을 적어놓음
+  - 마이페이지 : 자신의 닉네임과 잔여 다운로드 횟수를 확인할 수 있고 녹음과 업로드에서 저장된 목소리들을 다시 들어보고 다운로드 가능
 
 - **Axios 비동기 요청** :pushpin: [코드 확인]()
   - URL의 모양새인 경우, 컨텐츠를 등록하는 POST 요청을 비동기로 날립니다.
