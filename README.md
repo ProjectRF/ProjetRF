@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=5A4D45&height=150&section=header&text=RE.FIT&fontSize=30&fontColor=f8f3f1)
+![header](https://capsule-render.vercel.app/api?type=waving&color=5A4D45&height=150&section=header&text=RE.FIT&fontSize=40&fontColor=f8f3f1&fontAlignY=40)
 # :musical_note: RE.FIT(팀명 : Hi-Five)
 ![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/6974b95b-a3a1-4b3d-97bd-13154404ad5c)
 
@@ -411,4 +411,4 @@ public Page<Post> findAllByTagName(String tagName, Pageable pageable) {
     
 </br>
 
-![footer](https://capsule-render.vercel.app/api?type=waving&color=5A4D45&height=150&section=footer&text=Hi-Five&fontSize=30&fontColor=f8f3f1)
+![footer](https://capsule-render.vercel.app/api?type=waving&color=5A4D45&height=150&section=footer&text=Team%20Hi-Five&fontSize=20&fontColor=f8f3f1&fontAlignY=60)
