@@ -25,20 +25,20 @@ public class Deep_Result {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "increments")  // auto_increment
 	@SequenceGenerator(name = "increments", sequenceName = "increments", allocationSize = 1)
 	@Column(insertable = false, updatable = false)
-	private Long idx; // 인덱스 컬럼
+	private Long idx; 
 	
 	@ManyToOne
 	@JoinColumn(name = "memId")
-	private Member member; // 아이디/폴인키로 받기
+	private Member member; 
 	
 	@Column
-	private String course; // 경로 컬럼
+	private String course; 
 	
 	@Column
 	private String URL;
 	
 	@Column(nullable = false)
-    private Date indate = new Date(); // 생성 시점의 날짜/시간으로 초기화
+    private Date indate = new Date(); 
 	
 	
 }

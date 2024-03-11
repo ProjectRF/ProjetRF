@@ -23,5 +23,5 @@ public class Base_Voice {
     private String course;
     
     @Column(nullable = false)
-    private Date indate = new Date(); // 생성 시점의 날짜/시간으로 초기화
+    private Date indate = new Date(); 
 }

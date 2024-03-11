@@ -17,33 +17,27 @@ import lombok.Data;
 public class Member {
 	
 	@Id 
-	@Column( length = 100  ) // 컬럼에 대한 상세한 설정을 @Column 으로 지정
+	@Column( length = 100  ) 
 	private String memId;
 	
-	// 비밀번호
-	@Column(nullable = false) // < nullable을 false로 하면 not null이 되는 것
+	@Column(nullable = false) // 
 	private String memPw;
 
-	// 닉네임
 	@Column
 	private String memNick;
 
-	// 이메일
 	@Column
 	private String memEmail;
 	
-	// 성별
+	@Column
 	private String memGender;
 	
-	// 생년월일
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date memBirthdate;
 	
-	// 다운로드 횟수
 	@Column(columnDefinition = "NUMBER(10,0) DEFAULT 5")
 	private int downloadchance = 5;
 
-	// toString 오버라이딩 해야함!
 	public String toString() {
 		
 		return "MEMBER";

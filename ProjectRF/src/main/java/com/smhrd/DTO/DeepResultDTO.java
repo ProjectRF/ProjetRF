@@ -17,11 +17,9 @@ public class DeepResultDTO {
     
     private String URL;
     
- // 기본 생성자
     public DeepResultDTO() {
     }
 
-    // 모든 필드를 초기화하는 생성자
     public DeepResultDTO(Long idx, String memId, String course, Date indate, String URL) {
         this.idx = idx;
         this.memId = memId;
@@ -30,7 +28,6 @@ public class DeepResultDTO {
         this.URL = URL;
     }
 
-    // Getter와 Setter
     public Long getIdx() {
         return idx;
     }

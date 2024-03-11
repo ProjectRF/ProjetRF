@@ -20,7 +20,6 @@ public class UploadController {
 	public void goUpload() {
 	}
 	
-	/////////////////////////////////////////////////
 	
 	
 	
