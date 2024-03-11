@@ -50,29 +50,42 @@
 <div markdown="1">
 
 ### 4.1. 전체 흐름
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow1.png)
+![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/1189cfd7-806e-4839-8255-4db046941f81)
 
-### 4.2. 사용자 요청
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
 
-- **URL 정규식 체크** :pushpin: [코드 확인](https://github.com/JungHyung2/gitio.io/blob/95b4c4f06a2a5a74a00f81a3c3fcc003c994725f/index.html#L15C8-L15C26)
-  - Vue.js로 렌더링된 화면단에서, 사용자가 등록을 시도한 URL의 모양새를 정규식으로 확인합니다.
-  - URL의 모양새가 아닌 경우, 에러 메세지를 띄웁니다.
 
-- **Axios 비동기 요청** :pushpin: [코드 확인]()
-  - URL의 모양새인 경우, 컨텐츠를 등록하는 POST 요청을 비동기로 날립니다.
 
-### 4.3. Controller
+### 4.2. 시스템 아키텍처
+![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/38b907a0-3af6-4a1d-a079-a3a0c020a999)
 
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_controller.png)
 
-- **요청 처리** :pushpin: [코드 확인](https://github.com/JungHyung2/gitio.io/blob/d35d29b64c0e8b9653862bdcc1e6b997d2436ec9/index.html#L57C1-L57C202)
-  - Controller에서는 요청을 화면단에서 넘어온 요청을 받고, Service 계층에 로직 처리를 위임합니다.
+- **흐름예시**
+  - 사용자는 로그인을 한 후 녹음, 업로드, 통화파일 업로드 3가지 메인기능 이용 가능 그 외 서비스소개, FAQ, 마이페이지 이용 가능
+  - 서비스소개 : 간단한 사이트에 대한 소개 및 정보
+  - 음성 녹음 : 파일이름을 작성한 후 10문장을 녹음하고 원하는 텍스트를 작성하여 이용 가능
+  - 파일 업로드 : 불가피한 경우로 녹음이 불가능 할 경우 개인 녹음파일로 진행 가능 진행 순서는 음성 녹음과 동일
+  - 통화 구분 : 불가피한 경우로 인해 녹음 또는 개인 음성파일이 없을 경우 기본적으로 1대 1 통화파일을 업로드 시켜 화자를 구분해줌. 차후 선택창에서 A 또는 B의 목소리를 정해 다운로드 받을 수 있음
+  - FAQ : 간단한 질문들에 대한 답변을 적어놓음
+  - 마이페이지 : 자신의 닉네임과 잔여 다운로드 횟수를 확인할 수 있고 녹음과 업로드에서 저장된 목소리들을 다시 들어보고 다운로드 가능
 
-- **결과 응답** :pushpin: [코드 확인]()
-  - Service 계층에서 넘어온 로직 처리 결과(메세지)를 화면단에 응답해줍니다.
+### 4.3.1 핵심 기능 : 음성녹음
 
-### 4.4. Service
+![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/0b5146b7-1ab2-488d-a2e8-e556c547f2b6)
+
+
+
+  - 음성 녹음에서는 먼저 파일 이름을 지은 후  10개의 문장을 통해 녹음을 진행하게됩니다.
+  - JS로 구현한 녹음파일들을 하나로 합쳐 AJAX 비동기 요청을 PYTHON FLASK에 보냅니다.
+  - PYTHON FLASK에서 UPLOAD루트로 연결된 후 AMAZON S3와 연결하여 파일이름, 사용자ID, 녹음된 목소리를 폴더에 저장합니다.
+  - 그 후 사용자는 자신이 원하는 텍스트를 적어 변환하기 버튼을 누르면 AJAX통신으로 다시 PYTHON FLASK로 요청을 보냅니다.
+  - AJAX에서 텍스트와 사용자의 ID를 FORMDATA형식으로 받아 자료를 처리한 후 XTTS2에 녹음된 파일을 사용하여 텍스트를 입력하고 결과 파일을 AMAZON S3에 저장합니다.
+  - FALSK에서 RETURN값으로 AMAZON S3에 저장된 URL값을 받아온 후 URL을 JS를 통해 AUDIO 태그의 SRC에 추가해줍니다.
+  - 사용자가 결과로 출력된 음성을 듣고 마음에 든다면 저장하기 버튼을 눌러 CONTROLLER를 통해 ORACLE DB에 IDX, 사용자의 ID, 생성날짜, URL를 저장합니다.
+  - DB에 저장된 값들은 차후 마이페이지에서 자신의 보관함을 사용할 때 이용됩니다.
+
+
+
+### 4.3.2 핵심 기능 : 음성 파일 업로드
 
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_service1.png)
 
