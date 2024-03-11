@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <title>음성 녹음</title>
     <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
-<link rel="stylesheet" href="assets/css/음성-녹음.css" media="screen">
+<link rel="stylesheet" href="assets/css/record.css" media="screen">
     <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="assets/js/nicepage.js" defer=""></script>
     
@@ -427,10 +427,10 @@ borders: bottom !important; border-width: 2px !important; border-color: var(--cu
             var formDatarecord = new FormData();
             formDatarecord.append('file', finalBlob, 'plz.mkv');
             formDatarecord.append('project', $('#project').val()); // project 명 변수로 받기
-            formDatarecord.append('nickname', ${user.memNick}); // ${user.memId}로 받기
+            formDatarecord.append('nickname', nickname); // ${user.memId}로 받기
             
             $.ajax({
-                url : "http://192.168.219.57:5000/upload",
+                url : "http://125.136.157.189:5000/upload",
                 type : 'POST',
                 data : formDatarecord,
                 dataType: 'json',
@@ -461,7 +461,7 @@ borders: bottom !important; border-width: 2px !important; border-color: var(--cu
         const gopython2 = function() {
             var formData = new FormData();
             formData.append('sendtext', $('#sendtext').val());
-            formData.append('nickname', ${user.memNick});
+            formData.append('nickname', nickname);
             formData.append('project', $('#project').val());
 
             const audioPlayer2 = $('#audioPlayer');
@@ -472,7 +472,7 @@ borders: bottom !important; border-width: 2px !important; border-color: var(--cu
             });
 
             $.ajax({
-                url: "http://192.168.219.57:5000/incoding",
+                url: "http://125.136.157.189:5000/incoding",
                 type: 'POST',
                 data: formData,
                 processData: false,

@@ -9,7 +9,7 @@ import com.smhrd.entity.Deep_Result;
 import com.smhrd.entity.Member;
 
 @Repository
-public interface DeepRepositorty extends JpaRepository<Deep_Result, String> {
+public interface DeepRepositorty extends JpaRepository<Deep_Result, Long> {
 
 	List<Deep_Result> findByMember_MemId(String memId);
 	

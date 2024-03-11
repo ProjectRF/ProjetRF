@@ -289,9 +289,9 @@
         </button>
         <button id="secondButton" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><span class="u-file-icon u-icon u-text-custom-color-18 u-icon-5" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="images/27223-3460c3a5.png" alt=""></span>&nbsp;재생하기
         </button>
-<!-- B --> <button id="choice2" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-3"></span>&nbsp;선택하기
+<!-- B --> <button id="choice1" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-3"></span>&nbsp;선택하기
         </button>
-<!-- A --> <button id="choice1" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-4"></span>&nbsp;선택하기
+<!-- A --> <button id="choice2" class="u-btn u-btn-round u-button-style u-custom-color-14 u-custom-font u-custom-item u-hover-custom-color-15 u-radius u-btn-4"></span>&nbsp;선택하기
         </button>
       </div>
     </section>
@@ -348,7 +348,7 @@
     };
     
     var nickname = "${user.memId}";
-    var pyurl = "http://192.168.219.57:5000/divide";
+    var pyurl = "http://125.136.157.189:5000/divide";
     
     const gopython = function() {
         var formData = new FormData();
