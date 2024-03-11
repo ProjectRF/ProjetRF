@@ -1,4 +1,4 @@
-# :pushpin: RE.FIT(팀명 : Hi-Five)
+# :musical_note: RE.FIT(팀명 : Hi-Five)
 ![image](https://github.com/ProjectRF/ProjetRF/assets/144158751/6974b95b-a3a1-4b3d-97bd-13154404ad5c)
 
 ><b>XTTS2와 ClovaSpeech를 활용한 화자인식 및 음성복제 서비스</b>
@@ -9,29 +9,30 @@
 </br>
 
 ## 1. 제작 기간 & 역할분담
-- 2024년 1월 16일 ~ 3월 7일
-- 손병권(팀장) : PM, Front-End
-- 김연재(부팀장) : Back-End 및 DB 
-- 강치원(팀원) : Back-End 및 문서작업
-- 김미송(팀원) : Front-End
-- 오푸른(팀원) : Front-End
+- :calendar: 2024년 1월 16일 ~ 3월 7일
+- :crown: 손병권(팀장) : PM, Front-End
+- :crown: 김연재(부팀장) : Back-End 및 DB 
+- :star: 강치원(팀원) : Back-End 및 문서작업
+- :star: 김미송(팀원) : Front-End
+- :star: 오푸른(팀원) : Front-End
 
 </br>
 
 ## 2. 사용 기술
 #### `Back-end`
-  - Java 8
-  - Oracle DB
+  - ![java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+  - ![oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=black)
   - JPA
-  - Spring Boot
-  - Python
-  - Python Flask
-  - Amazon S3
+  - ![springboot](https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+  - ![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+  - ![flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+  - ![amazonS3](https://img.shields.io/badge/AmazonS3-569A31?style=for-the-badge&logo=AmazonS3&logoColor=white)
 #### `Front-end`
   - Nicepage
-  - HTML
-  - CSS
-  - JS
+  - ![html](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+  - ![css](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+  - ![js](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
+
 
 </br>
 
