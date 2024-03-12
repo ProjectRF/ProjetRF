@@ -107,14 +107,11 @@
 
 
 ### 4.3.4 기타 기능 : 마이페이지
+![img-3](https://github.com/ProjectRF/ProjetRF/assets/150218741/6c1697ff-b920-44cc-a643-08d4d9756c4e)
 
-### 4.5. Repository
-
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_repo.png)
-
-- **컨텐츠 저장** :pushpin: [코드 확인]()
-  - URL 유효성 체크와 이미지, 제목 파싱이 끝난 컨텐츠는 DB에 저장합니다.
-  - 저장된 컨텐츠는 다시 Repository - Service - Controller를 거쳐 화면단에 송출됩니다.
+  - 마이페이지에서는 음성녹음, 음성 업로드를 통해 저장한 음성 파일들을 확인할 수 있습니다.
+  - 사용자가 입력한 텍스트, 생성 일자를 확인할 수 있으며 재생하기를 통해 저장된 음성을 재생할 수 있고, 다운로드가 가능합니다.
+  - 기본으로 주어지는 다운로드 횟수는 5회 입니다. 이후 사용자의 이용에 따라 차감됩니다.
 
 </div>
 </details>
