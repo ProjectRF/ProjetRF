@@ -14,8 +14,8 @@
 - :crown: 손병권(팀장) : PM, Front-End
 - :crown: 김연재(부팀장) : Back-End 및 DB 
 - :star: 강치원(팀원) : Back-End 및 문서작업
-- :star: 김미송(팀원) : Front-End
-- :star: 오푸른(팀원) : Front-End
+- :star: 김미송(팀원) : Front-End 및 문서작업
+- :star: 오푸른(팀원) : Front-End 및 문서작업
 
 </br>
 
