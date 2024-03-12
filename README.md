@@ -89,24 +89,24 @@
 
 ### 4.3.2 핵심 기능 : 음성 파일 업로드
 
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_service1.png)
+![img-1](https://github.com/ProjectRF/ProjetRF/assets/150218741/b8c8d3d0-f9a0-45e0-b531-fc00c799f307)
+ 
+ 
+ - 음성 파일 업로드에서는 사용자가 오디오 파일을 먼저 업로드 합니다.
+ - 업로드 완료 알림 이후 음성 녹음과 마찬가지로 파일 이름을 짓고 시작하기 버튼을 누릅니다.
+ - 추후 과정은 음성 녹음과 같습니다. 
 
-- **Http 프로토콜 추가 및 trim()** :pushpin: [코드 확인]()
-  - 사용자가 URL 입력 시 Http 프로토콜을 생략하거나 공백을 넣은 경우,  
-  올바른 URL이 될 수 있도록 Http 프로토콜을 추가해주고, 공백을 제거해줍니다.
+### 4.3.3 핵심 기능 : 통화 파일 업로드 (화자 구분)
+![img-2](https://github.com/ProjectRF/ProjetRF/assets/150218741/e5c6dad7-0d80-40c3-b32c-fe6f6cc51b48)
 
-- **URL 접속 확인** :pushpin: [코드 확인]()
-  - 화면단에서 모양새만 확인한 URL이 실제 리소스로 연결되는지 HttpUrlConnection으로 테스트합니다.
-  - 이 때, 빠른 응답을 위해 Request Method를 GET이 아닌 HEAD를 사용했습니다.
-  - (HEAD 메소드는 GET 메소드의 응답 결과의 Body는 가져오지 않고, Header만 확인하기 때문에 GET 메소드에 비해 응답속도가 빠릅니다.)
+  - 통화 파일 업로드에서는 사용자가 오디오 파일을 먼저 업로드 합니다.
+  - 업로드 완료 알림 이후 파일 이름을 짓고 시작하기 버튼을 누릅니다.
+  - CloverSpeech를 통해 해당 파일에서 화자를 구분한 후 목소리 선택으로 넘어갑니다.
+  - 목소리 선택에서는 재생하기를 통해 구분된 화자의 목소리를 들을 수 있으며 누구의 목소리로 변환할 것인지 선택합니다.
+  - 선택하기 버튼을 통해 선택된 음성은 즉시 다운로드 되며, 사용자는 음성 파일 업로드에 해당 음성을 업로드 해 서비스를 이용합니다.
 
-  ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_service2.png)
 
-- **Jsoup 이미지, 제목 파싱** :pushpin: [코드 확인]()
-  - URL 접속 확인결과 유효하면 Jsoup을 사용해서 입력된 URL의 이미지와 제목을 파싱합니다.
-  - 이미지는 Open Graphic Tag를 우선적으로 파싱하고, 없을 경우 첫 번째 이미지와 제목을 파싱합니다.
-  - 컨텐츠에 이미지가 없을 경우, 미리 설정해둔 기본 이미지를 사용하고, 제목이 없을 경우 생략합니다.
-
+### 4.3.4 기타 기능 : 마이페이지
 
 ### 4.5. Repository
 
